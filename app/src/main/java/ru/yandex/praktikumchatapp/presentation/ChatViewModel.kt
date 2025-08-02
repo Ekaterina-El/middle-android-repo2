@@ -27,7 +27,6 @@ class ChatViewModel(
         }
     }
 
-    private fun sendMessage(message: Message) = _messages.update { it + message }
-
+    fun sendMessage(message: Message) = _messages.update { it + message }
     fun sendMyMessage(messageText: String) = sendMessage(message = Message.MyMessage(messageText))
 }
